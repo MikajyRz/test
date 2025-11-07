@@ -9,9 +9,19 @@
         <servlet-class>com.framework.FrontServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>UrlTestServlet</servlet-name>
+        <servlet-class>com.framework.UrlTestServlet</servlet-class>
+        <init-param>
+            <param-name>basePackage</param-name>
+            <param-value>test.java</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>FrontServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

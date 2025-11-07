@@ -6,7 +6,7 @@ import com.annotations.HandleUrl;
 @ControllerAnnotation("/controller2")
 public class TestControllerAnnotation2 {
     
-    @HandleUrl("/method1")
+    @HandleUrl("/method")
     public void method1() {}
 }
 

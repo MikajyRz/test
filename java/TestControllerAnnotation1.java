@@ -10,6 +10,6 @@ public class TestControllerAnnotation1 {
     public void method1() {}
     
     @HandleUrl("/method2")
-    public void method2() {}
+    public void liste() {}
 }
 
