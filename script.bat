@@ -20,9 +20,20 @@ echo ======================================
 echo Compilation du framework...
 if exist "%FRAMEWORK_SRC%" (
     if not exist framework_build mkdir framework_build
-    javac -d framework_build -cp "%FRAMEWORK_SRC%\lib\servlet-api.jar" "%FRAMEWORK_SRC%\src\com\framework\*.java" "%FRAMEWORK_SRC%\src\com\annotations\*.java"
-    if errorlevel 1 (
-        echo ÔÜá´©Å Erreur lors de la compilation du framework
+
+    rem Lister tous les fichiers .java du framework (annotations + framework) avec leurs chemins complets
+    dir /s /b "%FRAMEWORK_SRC%\src\com\framework\*.java" "%FRAMEWORK_SRC%\src\com\annotations\*.java" > sources_framework.txt 2>nul
+
+    if exist sources_framework.txt (
+        javac -d framework_build -cp "%FRAMEWORK_SRC%\lib\servlet-api.jar" @sources_framework.txt
+        if errorlevel 1 (
+            echo ÔÜá´©Å Erreur lors de la compilation du framework
+            del sources_framework.txt
+            exit /b 1
+        )
+        del sources_framework.txt
+    ) else (
+        echo ÔÜá´©Å Aucun fichier source Java du framework trouvé
         exit /b 1
     )
     

@@ -7,9 +7,13 @@ import com.annotations.HandleUrl;
 public class TestControllerAnnotation1 {
     
     @HandleUrl("/method1")
-    public void method1() {}
+    public String method1() {
+        return "salut";
+    }
     
     @HandleUrl("/method2")
-    public void liste() {}
+    public int liste() {
+        return 154;
+    }
 }
 
