@@ -1,0 +1,25 @@
+# === Fichiers/dirs spécifiques au projet test ===
+/build/
+/framework_build/com
+/out/
+/target/
+/bin/
+/dist/
+/*.war
+/*.jar
+
+# === Logs, temp, backups ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+.DS_Store
+Thumbs.db
+
+# === IDE: VS Code ===
+.vscode/
+
+# === OS divers ===
+Desktop.ini

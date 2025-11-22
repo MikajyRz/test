@@ -20,5 +20,10 @@ public class TestControllerAnnotation2 {
     public String fonctionner() {
         return "C'est un test de string";
     }
+
+    @HandleUrl("/test/{id}")
+    public String fonctionnerid() {
+        return "C'est un test id";
+    }
 }
 
