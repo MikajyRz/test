@@ -21,8 +21,12 @@ echo Compilation du framework...
 if exist "%FRAMEWORK_SRC%" (
     if not exist framework_build mkdir framework_build
 
-    rem Lister tous les fichiers .java du framework (annotations + framework) avec leurs chemins complets
-    dir /s /b "%FRAMEWORK_SRC%\src\com\framework\*.java" "%FRAMEWORK_SRC%\src\com\annotations\*.java" > sources_framework.txt 2>nul
+    rem Lister tous les fichiers .java du framework (annotations + framework + utils + classes) avec leurs chemins complets
+    dir /s /b ^
+        "%FRAMEWORK_SRC%\src\com\framework\*.java" ^
+        "%FRAMEWORK_SRC%\src\com\annotations\*.java" ^
+        "%FRAMEWORK_SRC%\src\com\utils\*.java" ^
+        "%FRAMEWORK_SRC%\src\com\classes\*.java" > sources_framework.txt 2>nul
 
     if exist sources_framework.txt (
         javac -d framework_build -cp "%FRAMEWORK_SRC%\lib\servlet-api.jar" @sources_framework.txt

@@ -3,7 +3,7 @@ package test.java;
 import com.annotations.HandleUrl;
 
 public class TestAnnotationUrl {
-    @HandleUrl("/HandleUrl")
+    @HandleUrl("/TestHandleUrl")
     public void home() {}
 
     @HandleUrl("/test/home")
