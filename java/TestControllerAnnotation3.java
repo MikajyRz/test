@@ -6,7 +6,9 @@ import com.classes.ModelView;
 public class TestControllerAnnotation3 {
     
     @HandleUrl("/nonn")
-    public void method1() {}
+    public String method1() {
+        return "noonnn";
+    }
     
     @HandleUrl("/testnonn")
     public ModelView method18() {

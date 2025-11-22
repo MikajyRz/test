@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 echo ======================================
 echo 1) V├®rification de la structure
 echo ======================================
-set FRAMEWORK_SRC=..\framework
+set FRAMEWORK_SRC=..\Framework
 echo Recherche des fichiers framework...
 if exist "%FRAMEWORK_SRC%\src\com\framework\FrontServlet.java" (
     echo Ô£à Fichiers framework trouv├®s dans: %FRAMEWORK_SRC%
