@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Test JSP Simple</h1>
-    <p>Hello World!</p>
+    <p>Hello World! C'est un test jsp</p>
     <p>Server time: <%= new java.util.Date() %></p>
 </body>
 </html>

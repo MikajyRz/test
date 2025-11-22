@@ -11,7 +11,7 @@ public class TestControllerAnnotation1 {
         return "salut";
     }
     
-    @HandleUrl("/method2")
+    @HandleUrl("/testnombre")
     public int liste() {
         return 154;
     }
