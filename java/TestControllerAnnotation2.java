@@ -10,7 +10,9 @@ public class TestControllerAnnotation2 {
     @HandleUrl("/testmodelview")
     public ModelView method1() {
         ModelView mvw = new ModelView();
-        mvw.setView("test.html");
+        mvw.setView("user.jsp");
+        mvw.addData("nom", "Razafimanjato");
+        mvw.addData("age", 21);
         return mvw;
     }
 
