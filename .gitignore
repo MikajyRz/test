@@ -1,0 +1,23 @@
+# Build / compilation
+*.class
+*.jar
+*.war
+/build/
+/target/
+/out/
+/framework_build/
+/test_build/
+
+# Archives générées
+Vraiappli.war
+
+# IDE / outils
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
